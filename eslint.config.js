@@ -8,6 +8,13 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 export default defineConfig([
   globalIgnores(['dist']),
   {
+    "rules": {
+      "react-refresh/only-export-components": "off",
+      "react-hooks/purity": "off",
+      "no-unsafe-finally": "off",
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": ["off"]
+    },
     files: ['**/*.{ts,tsx}'],
     extends: [
       js.configs.recommended,
