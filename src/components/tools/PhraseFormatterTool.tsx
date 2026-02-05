@@ -170,7 +170,7 @@ export function PhraseFormatterTool() {
         <textarea
           ref={textareaRef}
           className="aero-input resize-none"
-          placeholder="Hello {name}, welcome to {company}."
+          placeholder="Hello {Variabl 7}, welcome to {Variable 54}."
           value={phrase}
           onChange={event => {
             setPhrase(event.target.value);
