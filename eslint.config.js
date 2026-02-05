@@ -1,19 +1,22 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
-import { defineConfig, globalIgnores } from 'eslint/config'
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from 'typescript-eslint';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default defineConfig([
   globalIgnores(['dist']),
   {
-    "rules": {
-      "react-refresh/only-export-components": "off",
-      "react-hooks/purity": "off",
-      "no-unsafe-finally": "off",
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": ["off"]
+    rules: {
+      'react-refresh/only-export-components': 'off',
+      'react-hooks/purity': 'off',
+      'no-unsafe-finally': 'off',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': ['off'],
+      'max-len': 'off',
+      'react/jsx-wrap-multilines': 'off',
+      'react/jsx-one-expression-per-line': 'off',
     },
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -27,4 +30,4 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
-])
+]);
